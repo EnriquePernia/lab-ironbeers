@@ -14,7 +14,7 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/beers', (req, res, next) => {
- punkAPI.getBeers()
+ punkAPI.getBeers()//Asincrono
     .then(beers => {    
       res.render('beers',{beers});
     })
@@ -25,7 +25,7 @@ app.get('/beers', (req, res, next) => {
 });
 
 app.get('/randomBeer', (req, res, next) => {
-  punkAPI.getRandom()
+  punkAPI.getRandom()//Asincrono
      .then(beer => {    
        res.render('randomBeer',{beer});
      })
